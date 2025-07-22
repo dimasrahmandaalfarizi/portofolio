@@ -793,3 +793,23 @@ spaceStyle.textContent = `
   }
 `;
 document.head.appendChild(spaceStyle);
+
+function generateStars() {
+  document.querySelectorAll(".stars-bg").forEach((bg) => {
+    bg.innerHTML = "";
+    const starCount = 50 + Math.floor(Math.random() * 21); // 50-70 bintang
+    for (let i = 0; i < starCount; i++) {
+      const star = document.createElement("div");
+      star.className = "star";
+      star.style.top = Math.random() * 100 + "%";
+      star.style.left = Math.random() * 100 + "%";
+      const size = 1.5 + Math.random() * 2.5;
+      star.style.width = size + "px";
+      star.style.height = size + "px";
+      star.style.opacity = 0.5 + Math.random() * 0.5;
+      star.style.animationDelay = Math.random() * 2.5 + "s";
+      bg.appendChild(star);
+    }
+  });
+}
+window.addEventListener("DOMContentLoaded", generateStars);
