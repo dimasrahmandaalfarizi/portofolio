@@ -9246,7 +9246,7 @@ footer {
   main section {
     padding: 2rem 2vw !important;
   }
-  /* Card dan badge lebih mudah di-tap */
+  * Card dan badge lebih mudah di-tap */
   .focus-item,
   .portfolio-card,
   .testimonial-card,
