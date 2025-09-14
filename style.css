@@ -272,8 +272,13 @@ header::before {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: white;
+  color: white !important;
   transform: translateY(-2px);
+}
+
+.nav-links a:hover i,
+.nav-links a.active i {
+  color: white !important;
 }
 
 .nav-controls {
@@ -1302,6 +1307,84 @@ main section {
 }
 .skill-badge.figma {
   background: #f24e1e;
+  color: #fff;
+}
+
+/* Additional Skill Badge Colors */
+.skill-badge.vue {
+  background: #4fc08d;
+  color: #fff;
+}
+.skill-badge.angular {
+  background: #dd0031;
+  color: #fff;
+}
+.skill-badge.sass {
+  background: #cc6699;
+  color: #fff;
+}
+.skill-badge.bootstrap {
+  background: #7952b3;
+  color: #fff;
+}
+.skill-badge.tailwind {
+  background: #06b6d4;
+  color: #fff;
+}
+.skill-badge.express {
+  background: #000000;
+  color: #fff;
+}
+.skill-badge.python {
+  background: #3776ab;
+  color: #fff;
+}
+.skill-badge.mysql {
+  background: #4479a1;
+  color: #fff;
+}
+.skill-badge.mongodb {
+  background: #47a248;
+  color: #fff;
+}
+.skill-badge.postgresql {
+  background: #336791;
+  color: #fff;
+}
+.skill-badge.react-native {
+  background: #61dafb;
+  color: #1e2a38;
+}
+.skill-badge.flutter {
+  background: #02569b;
+  color: #fff;
+}
+.skill-badge.github {
+  background: #181717;
+  color: #fff;
+}
+.skill-badge.firebase {
+  background: #ffca28;
+  color: #1e2a38;
+}
+.skill-badge.photoshop {
+  background: #31a8ff;
+  color: #fff;
+}
+.skill-badge.illustrator {
+  background: #ff9a00;
+  color: #fff;
+}
+.skill-badge.jest {
+  background: #c21325;
+  color: #fff;
+}
+.skill-badge.webpack {
+  background: #8dd6f9;
+  color: #1e2a38;
+}
+.skill-badge.vite {
+  background: #646cff;
   color: #fff;
 }
 
@@ -10783,5 +10866,174 @@ main section:not(:last-child)::after {
     background: white !important;
     border: 1px solid #ccc !important;
     box-shadow: none !important;
+  }
+}
+/* ===== SPECIAL ANIMATIONS FOR JAVASCRIPT & REACT ===== */
+
+/* JavaScript Badge Animation */
+.skill-badge.js {
+  background: #f7df1e !important;
+  color: #1e2a38 !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-badge.js::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 0, 0, 0.1),
+    transparent
+  );
+  animation: jsShine 2s ease-in-out infinite;
+}
+
+@keyframes jsShine {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* React Badge Animation */
+.skill-badge.react {
+  background: #61dafb !important;
+  color: #1e2a38 !important;
+  position: relative;
+}
+
+.skill-badge.react i {
+  animation: reactSpin 3s linear infinite;
+}
+
+@keyframes reactSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Enhanced hover effects for JS and React */
+.skill-badge.js:hover,
+.skill-badge.react:hover {
+  transform: translateY(-5px) scale(1.1) !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Floating icons enhancement for JS and React */
+.floating-icon.fa-js-square,
+.floating-icon.fa-react {
+  opacity: 0.3 !important;
+  animation: floatIconEnhanced 4s ease-in-out infinite !important;
+}
+
+@keyframes floatIconEnhanced {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translateY(-15px) rotate(5deg) scale(1.1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-25px) rotate(0deg) scale(1.2);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translateY(-15px) rotate(-5deg) scale(1.1);
+    opacity: 0.5;
+  }
+}
+
+/* Skill progress bars for JS and React with special effects */
+.skill-item:has(.skill-name:contains("JavaScript")) .skill-progress,
+.skill-item:has(.skill-name:contains("React")) .skill-progress {
+  background: linear-gradient(45deg, #f7df1e, #61dafb) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-item:has(.skill-name:contains("JavaScript")) .skill-progress::before,
+.skill-item:has(.skill-name:contains("React")) .skill-progress::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  animation: skillGlow 2s ease-in-out infinite;
+}
+
+@keyframes skillGlow {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Portfolio grid improvements */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+  gap: 2rem !important;
+  justify-items: center;
+}
+
+/* Better mobile responsiveness for portfolio */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .portfolio-card {
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+}
+
+/* Skills badges responsive layout */
+.skills-badges {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important;
+  gap: 1rem !important;
+  justify-items: center;
+}
+
+@media (max-width: 768px) {
+  .skills-badges {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) !important;
+    gap: 0.8rem !important;
+  }
+
+  .skill-badge {
+    padding: 0.6rem 1rem !important;
+    font-size: 0.8rem !important;
   }
 }

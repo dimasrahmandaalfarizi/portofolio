@@ -993,3 +993,139 @@ function initScrollProgress() {
 document.addEventListener("DOMContentLoaded", () => {
   initScrollProgress();
 });
+// ===== ENHANCED SKILL BADGE ANIMATIONS =====
+
+// Special animations for JavaScript and React badges
+function initSpecialSkillAnimations() {
+  const jsBadge = document.querySelector(".skill-badge.js");
+  const reactBadge = document.querySelector(".skill-badge.react");
+
+  if (jsBadge) {
+    // Add pulsing effect to JavaScript badge
+    setInterval(() => {
+      jsBadge.style.transform = "scale(1.05)";
+      setTimeout(() => {
+        jsBadge.style.transform = "scale(1)";
+      }, 200);
+    }, 3000);
+
+    // Add click effect
+    jsBadge.addEventListener("click", () => {
+      jsBadge.style.animation = "none";
+      setTimeout(() => {
+        jsBadge.style.animation = "";
+      }, 100);
+    });
+  }
+
+  if (reactBadge) {
+    // Add special hover effect to React badge
+    reactBadge.addEventListener("mouseenter", () => {
+      const icon = reactBadge.querySelector("i");
+      if (icon) {
+        icon.style.animationDuration = "0.5s";
+      }
+    });
+
+    reactBadge.addEventListener("mouseleave", () => {
+      const icon = reactBadge.querySelector("i");
+      if (icon) {
+        icon.style.animationDuration = "3s";
+      }
+    });
+  }
+}
+
+// Enhanced portfolio filter animations
+function enhancePortfolioFilters() {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const portfolioCards = document.querySelectorAll(".portfolio-card");
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      // Remove active class from all buttons
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      // Add active class to clicked button
+      button.classList.add("active");
+
+      const filter = button.getAttribute("data-filter");
+
+      // Enhanced animation for filtering
+      portfolioCards.forEach((card, index) => {
+        card.style.opacity = "0";
+        card.style.transform = "scale(0.8) translateY(20px)";
+      });
+
+      // Show filtered cards with staggered animation
+      setTimeout(() => {
+        let visibleIndex = 0;
+        portfolioCards.forEach((card) => {
+          const category = card.getAttribute("data-category");
+
+          if (filter === "all" || category === filter) {
+            card.style.display = "block";
+            setTimeout(() => {
+              card.style.opacity = "1";
+              card.style.transform = "scale(1) translateY(0)";
+            }, visibleIndex * 100);
+            visibleIndex++;
+          } else {
+            card.style.display = "none";
+          }
+        });
+      }, 300);
+    });
+  });
+}
+
+// Initialize all enhanced features
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    initSpecialSkillAnimations();
+    enhancePortfolioFilters();
+  }, 1000);
+});
+
+// Add enhanced CSS for better animations
+const enhancedAnimationStyles = document.createElement("style");
+enhancedAnimationStyles.textContent = `
+  /* Enhanced portfolio card transitions */
+  .portfolio-card {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  }
+  
+  /* Enhanced skill badge transitions */
+  .skill-badge {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  }
+  
+  /* Better mobile menu animation */
+  @media (max-width: 768px) {
+    .nav-links.active {
+      animation: slideInFromTop 0.4s ease-out !important;
+    }
+  }
+  
+  @keyframes slideInFromTop {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Enhanced button hover effects */
+  .btn:hover {
+    animation: buttonBounce 0.4s ease-out !important;
+  }
+  
+  @keyframes buttonBounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1.02); }
+  }
+`;
+document.head.appendChild(enhancedAnimationStyles);
