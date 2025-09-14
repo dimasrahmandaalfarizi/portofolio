@@ -1351,10 +1351,6 @@ main section {
   background: #336791;
   color: #fff;
 }
-.skill-badge.react-native {
-  background: #61dafb;
-  color: #1e2a38;
-}
 .skill-badge.flutter {
   background: #02569b;
   color: #fff;
@@ -1365,7 +1361,7 @@ main section {
 }
 .skill-badge.firebase {
   background: #ffca28;
-  color: #1e2a38;
+  color: #fff;
 }
 .skill-badge.photoshop {
   background: #31a8ff;
@@ -1381,7 +1377,7 @@ main section {
 }
 .skill-badge.webpack {
   background: #8dd6f9;
-  color: #1e2a38;
+  color: #fff;
 }
 .skill-badge.vite {
   background: #646cff;
