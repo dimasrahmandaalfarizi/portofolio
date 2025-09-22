@@ -9,32 +9,8 @@ window.addEventListener("load", () => {
   }, 500); // Reduced loading time
 });
 
-// Dark Mode Toggle
-const darkModeToggle = document.getElementById("darkModeToggle");
-const body = document.body;
-
-// Check for saved theme preference or default to light mode
-const currentTheme = localStorage.getItem("theme") || "light";
-document.documentElement.setAttribute("data-theme", currentTheme);
-updateThemeIcon(currentTheme);
-
-darkModeToggle.addEventListener("click", () => {
-  const currentTheme = document.documentElement.getAttribute("data-theme");
-  const newTheme = currentTheme === "dark" ? "light" : "dark";
-
-  document.documentElement.setAttribute("data-theme", newTheme);
-  localStorage.setItem("theme", newTheme);
-  updateThemeIcon(newTheme);
-});
-
-function updateThemeIcon(theme) {
-  const icon = darkModeToggle.querySelector("i");
-  if (theme === "dark") {
-    icon.className = "fas fa-sun";
-  } else {
-    icon.className = "fas fa-moon";
-  }
-}
+// Set dark mode as default
+document.documentElement.setAttribute("data-theme", "dark");
 
 // Mobile Menu Toggle
 const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");

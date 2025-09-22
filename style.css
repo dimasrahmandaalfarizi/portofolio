@@ -1,30 +1,5 @@
-/* Enhanced CSS Variables with Modern Color Palette */
+/* Enhanced CSS Variables with Dark Theme Only */
 :root {
-  --bg-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --bg-secondary: #ffffff;
-  --bg-card: rgba(255, 255, 255, 0.95);
-  --text-primary: #1a202c;
-  --text-secondary: #4a5568;
-  --accent-color: #667eea;
-  --accent-secondary: #764ba2;
-  --accent-tertiary: #f093fb;
-  --success-color: #48bb78;
-  --warning-color: #ed8936;
-  --error-color: #f56565;
-  --border-color: rgba(226, 232, 240, 0.8);
-  --shadow-light: rgba(0, 0, 0, 0.05);
-  --shadow-medium: rgba(0, 0, 0, 0.1);
-  --shadow-heavy: rgba(0, 0, 0, 0.15);
-  --shadow-colored: rgba(102, 126, 234, 0.25);
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  --gradient-tertiary: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  --gradient-success: linear-gradient(135deg, #81ffef 0%, #f067b4 100%);
-  --glass-bg: rgba(255, 255, 255, 0.25);
-  --glass-border: rgba(255, 255, 255, 0.18);
-}
-
-[data-theme="dark"] {
   --bg-primary: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
   --bg-secondary: rgba(30, 41, 59, 0.95);
   --bg-card: rgba(30, 41, 59, 0.8);
@@ -285,47 +260,6 @@ header::before {
   display: flex;
   align-items: center;
   gap: 1rem;
-}
-
-.theme-toggle {
-  background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--glass-border);
-  color: var(--text-primary);
-  font-size: 1.2rem;
-  cursor: pointer;
-  padding: 0.8rem;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.theme-toggle::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--gradient-primary);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.theme-toggle:hover {
-  transform: rotate(180deg) scale(1.1);
-  box-shadow: 0 8px 25px var(--shadow-colored);
-}
-
-.theme-toggle:hover::before {
-  opacity: 1;
-}
-
-.theme-toggle:hover i {
-  color: white;
-  position: relative;
-  z-index: 1;
 }
 
 .mobile-menu-toggle {
@@ -1225,6 +1159,7 @@ main section {
 .skill-badge {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   padding: 0.8rem 1.2rem;
   border-radius: 25px;
@@ -1234,6 +1169,10 @@ main section {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  min-width: 120px;
+  height: 44px;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .skill-badge::before {
@@ -1261,127 +1200,138 @@ main section {
   box-shadow: 0 8px 20px var(--shadow-medium);
 }
 
+/* Frontend Technologies - Authentic Brand Colors */
 .skill-badge.html {
-  background: #e44d26;
-  color: #fff;
+  background: #e34f26 !important;
+  color: #fff !important;
 }
 .skill-badge.css {
-  background: #264de4;
-  color: #fff;
+  background: #1572b6 !important;
+  color: #fff !important;
 }
 .skill-badge.js {
-  background: #f7df1e;
-  color: #1e2a38;
+  background: #f7df1e !important;
+  color: #000 !important;
 }
 .skill-badge.react {
-  background: #61dafb;
-  color: #1e2a38;
+  background: #61dafb !important;
+  color: #000 !important;
 }
 .skill-badge.vue {
-  background: #42b883;
-  color: #fff;
-}
-.skill-badge.php {
-  background: #777bb4;
-  color: #fff;
-}
-.skill-badge.laravel {
-  background: #f55247;
-  color: #fff;
-}
-.skill-badge.node {
-  background: #339933;
-  color: #fff;
-}
-.skill-badge.git {
-  background: #f34f29;
-  color: #fff;
-}
-.skill-badge.docker {
-  background: #2496ed;
-  color: #fff;
-}
-.skill-badge.aws {
-  background: #ff9900;
-  color: #fff;
-}
-.skill-badge.figma {
-  background: #f24e1e;
-  color: #fff;
-}
-
-/* Additional Skill Badge Colors */
-.skill-badge.vue {
-  background: #4fc08d;
-  color: #fff;
+  background: #4fc08d !important;
+  color: #fff !important;
 }
 .skill-badge.angular {
-  background: #dd0031;
-  color: #fff;
+  background: #dd0031 !important;
+  color: #fff !important;
 }
 .skill-badge.sass {
-  background: #cc6699;
-  color: #fff;
+  background: #cc6699 !important;
+  color: #fff !important;
 }
 .skill-badge.bootstrap {
-  background: #7952b3;
-  color: #fff;
+  background: #7952b3 !important;
+  color: #fff !important;
 }
 .skill-badge.tailwind {
-  background: #06b6d4;
-  color: #fff;
+  background: #06b6d4 !important;
+  color: #fff !important;
+}
+
+/* Backend Technologies - Authentic Brand Colors */
+.skill-badge.php {
+  background: #777bb4 !important;
+  color: #fff !important;
+}
+.skill-badge.laravel {
+  background: #ff2d20 !important;
+  color: #fff !important;
+}
+.skill-badge.node {
+  background: #339933 !important;
+  color: #fff !important;
 }
 .skill-badge.express {
-  background: #000000;
-  color: #fff;
+  background: #000000 !important;
+  color: #fff !important;
 }
 .skill-badge.python {
-  background: #3776ab;
-  color: #fff;
+  background: #3776ab !important;
+  color: #fff !important;
 }
+
+/* Database - Authentic Brand Colors */
 .skill-badge.mysql {
-  background: #4479a1;
-  color: #fff;
+  background: #4479a1 !important;
+  color: #fff !important;
 }
 .skill-badge.mongodb {
-  background: #47a248;
-  color: #fff;
+  background: #47a248 !important;
+  color: #fff !important;
 }
 .skill-badge.postgresql {
-  background: #336791;
-  color: #fff;
+  background: #336791 !important;
+  color: #fff !important;
+}
+
+/* Mobile Development - Authentic Brand Colors */
+.skill-badge.react-native {
+  background: #61dafb !important;
+  color: #000 !important;
 }
 .skill-badge.flutter {
-  background: #02569b;
-  color: #fff;
+  background: #02569b !important;
+  color: #fff !important;
+}
+
+/* Tools & Version Control - Authentic Brand Colors */
+.skill-badge.git {
+  background: #f05032 !important;
+  color: #fff !important;
 }
 .skill-badge.github {
-  background: #181717;
-  color: #fff;
+  background: #181717 !important;
+  color: #fff !important;
+}
+.skill-badge.docker {
+  background: #2496ed !important;
+  color: #fff !important;
+}
+.skill-badge.aws {
+  background: #ff9900 !important;
+  color: #000 !important;
 }
 .skill-badge.firebase {
-  background: #ffca28;
-  color: #fff;
+  background: #ffca28 !important;
+  color: #000 !important;
+}
+
+/* Design Tools - Authentic Brand Colors */
+.skill-badge.figma {
+  background: #f24e1e !important;
+  color: #fff !important;
 }
 .skill-badge.photoshop {
-  background: #31a8ff;
-  color: #fff;
+  background: #31a8ff !important;
+  color: #fff !important;
 }
 .skill-badge.illustrator {
-  background: #ff9a00;
-  color: #fff;
+  background: #ff9a00 !important;
+  color: #fff !important;
 }
+
+/* Testing & Build Tools - Authentic Brand Colors */
 .skill-badge.jest {
-  background: #c21325;
-  color: #fff;
+  background: #c21325 !important;
+  color: #fff !important;
 }
 .skill-badge.webpack {
-  background: #8dd6f9;
-  color: #fff;
+  background: #8dd6f9 !important;
+  color: #000 !important;
 }
 .skill-badge.vite {
-  background: #646cff;
-  color: #fff;
+  background: #646cff !important;
+  color: #fff !important;
 }
 
 /* ===== SPACE ANIMATION SYSTEM ===== */
@@ -2450,68 +2400,9 @@ footer {
   z-index: -1;
 }
 
-/* Space Scenes for Other Sections */
-.space-scene-portfolio,
-.space-scene-skills,
-.space-scene-experience,
-.space-scene-testimonials,
-.space-scene-contact {
-  position: absolute;
-  top: -50px;
-  left: -50px;
-  right: -50px;
-  bottom: -50px;
-  pointer-events: none;
-  z-index: -1;
-}
 
-/* Hide Space Scene in Light Mode */
-[data-theme="light"] .space-scene {
-  display: none;
-}
 
-/* Show Space Scene in Dark Mode */
-[data-theme="dark"] .space-scene {
-  display: block;
-}
 
-/* Ensure space scene is visible in dark mode */
-[data-theme="dark"] .about-photo-section .space-scene {
-  display: block !important;
-}
-
-/* Show Solar Flare Scene in Light Mode */
-/* Sunrise & Morning Theme for Light Mode */
-[data-theme="light"] .sunrise-morning-theme {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  z-index: 1;
-  overflow: hidden;
-  display: block;
-}
-
-/* Hide Sunrise & Morning Theme in Dark Mode */
-[data-theme="dark"] .sunrise-morning-theme {
-  display: none !important;
-}
-
-/* Dynamic Sun - Only visible in light mode */
-[data-theme="light"] .dynamic-sun {
-  position: absolute;
-  top: 10%;
-  right: 15%;
-  width: 80px;
-  height: 80px;
-  /* Remove animation to make sun static */
-}
-
-[data-theme="dark"] .dynamic-sun {
-  display: none !important;
-}
 
 .sun-body {
   position: relative;
@@ -2593,114 +2484,7 @@ footer {
   transform: translate(-50%, -50%) rotate(315deg);
 }
 
-/* Moving Clouds - Only visible in light mode */
-[data-theme="light"] .clouds-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 
-[data-theme="dark"] .clouds-container {
-  display: none !important;
-}
-
-/* Additional clouds for light theme */
-[data-theme="light"] .additional-clouds {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-[data-theme="dark"] .additional-clouds {
-  display: none !important;
-}
-
-/* Additional static clouds for light theme */
-[data-theme="light"] .additional-clouds .cloud {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 50px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 4px 16px rgba(0, 0, 0, 0.05),
-    inset 0 2px 4px rgba(255, 255, 255, 0.3);
-}
-
-[data-theme="light"] .additional-clouds .cloud::before,
-[data-theme="light"] .additional-clouds .cloud::after {
-  content: "";
-  position: absolute;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 50%;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04),
-    inset 0 1px 2px rgba(255, 255, 255, 0.4);
-}
-
-[data-theme="light"] .additional-clouds .cloud-6 {
-  width: 70px;
-  height: 35px;
-  top: 25%;
-  right: 25%;
-}
-
-[data-theme="light"] .additional-clouds .cloud-6::before {
-  width: 35px;
-  height: 35px;
-  top: -17px;
-  left: 10px;
-}
-
-[data-theme="light"] .additional-clouds .cloud-6::after {
-  width: 30px;
-  height: 30px;
-  top: -12px;
-  right: 10px;
-}
-
-[data-theme="light"] .additional-clouds .cloud-7 {
-  width: 55px;
-  height: 28px;
-  top: 45%;
-  right: 10%;
-}
-
-[data-theme="light"] .additional-clouds .cloud-7::before {
-  width: 28px;
-  height: 28px;
-  top: -14px;
-  left: 8px;
-}
-
-[data-theme="light"] .additional-clouds .cloud-7::after {
-  width: 25px;
-  height: 25px;
-  top: -10px;
-  right: 8px;
-}
-
-[data-theme="light"] .additional-clouds .cloud-8 {
-  width: 65px;
-  height: 32px;
-  top: 60%;
-  right: 35%;
-}
-
-[data-theme="light"] .additional-clouds .cloud-8::before {
-  width: 32px;
-  height: 32px;
-  top: -16px;
-  left: 12px;
-}
-
-[data-theme="light"] .additional-clouds .cloud-8::after {
-  width: 28px;
-  height: 28px;
-  top: -11px;
-  right: 12px;
-}
 
 .cloud {
   position: absolute;
@@ -2875,18 +2659,7 @@ footer {
   right: 7px;
 }
 
-/* Morning Birds - Only visible in light mode */
-[data-theme="light"] .birds-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 
-[data-theme="dark"] .birds-container {
-  display: none !important;
-}
 
 .bird {
   position: absolute;
@@ -2940,18 +2713,7 @@ footer {
   animation-delay: 10s;
 }
 
-/* Morning Dew - Only visible in light mode */
-[data-theme="light"] .dew-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 
-[data-theme="dark"] .dew-container {
-  display: none !important;
-}
 
 .dew-drop {
   position: absolute;
@@ -3007,18 +2769,7 @@ footer {
   animation-delay: 3.5s;
 }
 
-/* Morning Light Rays - Only visible in light mode */
-[data-theme="light"] .light-rays {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 
-[data-theme="dark"] .light-rays {
-  display: none !important;
-}
 
 .light-ray {
   position: absolute;
@@ -3049,19 +2800,7 @@ footer {
   animation-delay: 3.2s;
 }
 
-/* Floating Flowers - Only visible in light mode */
-[data-theme="light"] .morning-flowers {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: none; /* Hide flowers/leaves in light theme */
-}
 
-[data-theme="dark"] .morning-flowers {
-  display: none !important;
-}
 
 .flower {
   position: absolute;
@@ -3170,18 +2909,7 @@ footer {
   animation-delay: 2s;
 }
 
-/* Morning Particles - Only visible in light mode */
-[data-theme="light"] .morning-particles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 
-[data-theme="dark"] .morning-particles {
-  display: none !important;
-}
 
 .morning-particle {
   position: absolute;
@@ -3233,15 +2961,105 @@ footer {
   animation-delay: 2.5s;
 }
 
-/* Hide Solar Flare Theme in Light Mode for About Section */
-[data-theme="light"] .about-photo-section .solar-flare,
-[data-theme="light"] .about-photo-section .sun-rays,
-[data-theme="light"] .about-photo-section .energy-particles,
-[data-theme="light"] .about-photo-section .radiant-waves {
+/* Show Space Theme by default (dark mode) */
+.particle-system,
+.space-dust,
+.cosmic-rays,
+.nebula-clouds,
+.stars,
+.planet,
+.planet-rocket,
+.space-scene-portfolio,
+.space-scene-skills,
+.space-scene-experience,
+.space-scene-testimonials,
+.space-scene-contact,
+.comet,
+.meteor,
+.satellite,
+.space-station,
+.portfolio-comet,
+.portfolio-meteor,
+.portfolio-satellite,
+.skills-comet,
+.skills-meteor,
+.skills-space-station,
+.experience-comet,
+.experience-meteor,
+.experience-satellite,
+.testimonials-comet,
+.testimonials-meteor,
+.testimonials-satellite,
+.contact-comet,
+.contact-meteor,
+.contact-satellite,
+.contact-space-station,
+.space-animation-system {
+  display: block;
+}
+
+/* Hide light mode elements */
+.sunrise-morning-theme,
+.dynamic-sun,
+.clouds-container,
+.additional-clouds,
+.birds-container,
+.dew-container,
+.light-rays,
+.morning-flowers,
+.morning-particles,
+.solar-flare,
+.sun-rays,
+.energy-particles,
+.radiant-waves,
+.festival-lights,
+.string-lights,
+.festival-flags,
+.celebration-confetti,
+.cherry-blossoms,
+.sakura-petals,
+.additional-sakura,
+.falling-sakura {
   display: none !important;
 }
 
-/* About Photo Section with Space Scene */
+/* Dark mode particle colors */
+.particle {
+  background: linear-gradient(45deg, var(--accent-color), #8b5cf6);
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
+}
+
+/* Space Scenes for Other Sections - Always visible */
+.space-scene-portfolio,
+.space-scene-skills,
+.space-scene-experience,
+.space-scene-testimonials,
+.space-scene-contact {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  right: -50px;
+  bottom: -50px;
+  pointer-events: none;
+  z-index: -1;
+  display: block;
+}
+
+/* Space Scene around photo - always visible */
+.space-scene {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  right: -50px;
+  bottom: -50px;
+  pointer-events: none;
+  z-index: -1;
+  display: block;
+}
+
+.about-photo-section .space-scene {
+  display: block !important;
+}
 .about-photo-section {
   position: relative;
   display: flex;
@@ -3932,25 +3750,7 @@ footer {
   animation: particleFloat 8s linear infinite;
 }
 
-/* Festival Lights Theme - Light Mode Only */
-[data-theme="light"] .particle {
-  background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
-  box-shadow: 0 0 10px rgba(255, 107, 107, 0.6);
-}
 
-[data-theme="light"] .particle:hover {
-  box-shadow: 0 0 20px rgba(255, 107, 107, 0.8);
-}
-
-/* Dark Mode Particle Colors */
-[data-theme="dark"] .particle {
-  background: linear-gradient(45deg, var(--accent-color), #8b5cf6);
-  box-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
-}
-
-[data-theme="dark"] .particle:hover {
-  box-shadow: 0 0 15px rgba(59, 130, 246, 0.8);
-}
 
 .particle-1 {
   top: 10%;
