@@ -9,6 +9,11 @@ window.addEventListener("load", () => {
   }, 500); // Reduced loading time
 });
 
+// Function to open certificate PDF files
+function openCertificate(pdfPath) {
+  window.open(pdfPath, '_blank');
+}
+
 // Set dark mode as default
 document.documentElement.setAttribute("data-theme", "dark");
 
