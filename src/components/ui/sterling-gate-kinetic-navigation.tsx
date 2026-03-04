@@ -178,11 +178,19 @@ export function Component() {
   return (
     <div ref={containerRef}>
       <div className="site-header-wrapper">
-        <header className="header">
+        <header
+          className="header"
+          style={{
+            background: "transparent",
+            backdropFilter: "blur(0px)",
+            WebkitBackdropFilter: "blur(0px)",
+            border: "none",
+          }}
+        >
           <div className="container is--full">
             <nav className="nav-row">
               <a href="#" aria-label="home" className="nav-logo-row w-inline-block">
-                <span className="nav-logo-text">Portfolio</span>
+                <span className="nav-logo-text" style={{ color: "#ffffff", letterSpacing: "0.12em", fontSize: "1rem" }}>RAHMANDA</span>
               </a>
               <div className="nav-row__right">
                 <div
