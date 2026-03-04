@@ -279,20 +279,30 @@ export function Component() {
             <div className="menu-content-wrapper">
               <ul className="menu-list">
                 <li className="menu-list-item" data-shape="1">
-                  <a href="#" className="nav-link w-inline-block">
+                  <a
+                    href="#about"
+                    className="nav-link w-inline-block"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      closeMenu();
+                      setTimeout(() => {
+                        document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                      }, 400);
+                    }}
+                  >
                     <p className="nav-link-text">About</p>
                     <div className="nav-link-hover-bg"></div>
                   </a>
                 </li>
                 <li className="menu-list-item" data-shape="2">
                   <a href="#" className="nav-link w-inline-block">
-                    <p className="nav-link-text">Projects</p>
+                    <p className="nav-link-text">Skills</p>
                     <div className="nav-link-hover-bg"></div>
                   </a>
                 </li>
                 <li className="menu-list-item" data-shape="3">
                   <a href="#" className="nav-link w-inline-block">
-                    <p className="nav-link-text">Skills</p>
+                    <p className="nav-link-text">Certificate</p>
                     <div className="nav-link-hover-bg"></div>
                   </a>
                 </li>
