@@ -1,40 +1,23 @@
-import Navigation from '@/components/Navigation';
-import Hero from '@/components/Hero';
-import About from '@/components/About';
-import Skills from '@/components/Skills';
-import Projects from '@/components/Projects';
-import Contact from '@/components/Contact';
+import { Component as KineticNav } from "@/components/ui/sterling-gate-kinetic-navigation";
+import { ProfileCard } from "@/components/ui/profile-card";
 
 export default function Home() {
   return (
     <>
-      <Navigation />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+      <KineticNav />
+      <main className="min-h-screen flex items-center justify-center bg-gray-50 pt-20">
+        <ProfileCard
+          name="Dimas Rahmanda Alfarizi"
+          title="Front-End Developer & UI Enthusiast"
+          description="Dimas is a passionate front-end developer with a keen eye for design and user experience. He builds modern, responsive web applications using React, Next.js, and TypeScript, creating seamless digital experiences that leave a lasting impression."
+          imageUrl="https://plus.unsplash.com/premium_photo-1689977807477-a579eda91fa2?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          githubUrl="https://github.com/dimasrahmandaalfarizi"
+          twitterUrl="#"
+          youtubeUrl="#"
+          linkedinUrl="#"
+        />
       </main>
-
-      {/* Footer */}
-      <footer className="bg-slate-900/50 border-t border-slate-800 py-8">
-        <div className="container">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-slate-400 text-center md:text-left">
-              © 2026 Dimas Rahmanda Alfarizi. Built with Next.js & Tailwind CSS
-            </p>
-            <div className="flex items-center gap-4">
-              <a
-                href="#"
-                className="text-slate-400 hover:text-cyan-400 transition-colors"
-              >
-                Back to Top ↑
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
     </>
   );
 }
+
