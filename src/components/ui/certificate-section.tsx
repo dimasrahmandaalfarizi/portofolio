@@ -3,104 +3,92 @@ import React from "react";
 import { HeroParallax } from "@/components/blocks/hero-parallax";
 
 /* ─── Certificate data ───────────────────────────────────────── */
-/* Replace thumbnails with your actual certificate images */
+/* Using user's 9 images and duplicating some to fill the 15 parallax slots */
 const certificates = [
   {
-    title: "Web Development Fundamentals",
+    title: "Certificate 1",
     link: "#",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+    thumbnail: "/certificates/C1.png",
   },
   {
-    title: "React & Next.js Mastery",
+    title: "Certificate 2",
     link: "#",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+    thumbnail: "/certificates/C2.png",
   },
   {
-    title: "Database Management",
+    title: "Certificate 3",
     link: "#",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+    thumbnail: "/certificates/C3.png",
   },
   {
-    title: "Cloud Computing Essentials",
+    title: "Certificate 4",
     link: "#",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+    thumbnail: "/certificates/C4.png",
   },
   {
-    title: "UI/UX Design Principles",
+    title: "Certificate 5",
     link: "#",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editrix.png",
+    thumbnail: "/certificates/C5.png",
+  },
+  // Row 2
+  {
+    title: "Certificate 6",
+    link: "#",
+    thumbnail: "/certificates/C6.png",
   },
   {
-    title: "JavaScript Advanced",
+    title: "Certificate 7",
     link: "#",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+    thumbnail: "/certificates/C7.png",
   },
   {
-    title: "Python Programming",
+    title: "Certificate 8",
     link: "#",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
+    thumbnail: "/certificates/C8.png",
   },
   {
-    title: "Mobile App Development",
+    title: "Certificate 9",
     link: "#",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
+    thumbnail: "/certificates/C9.png",
+  },
+  // Duplicating the most visually heavy ones to fill remaining 6 slots
+  {
+    title: "Certificate 1",
+    link: "#",
+    thumbnail: "/certificates/C1.png",
+  },
+  // Row 3
+  {
+    title: "Certificate 2",
+    link: "#",
+    thumbnail: "/certificates/C2.png",
   },
   {
-    title: "DevOps & CI/CD",
+    title: "Certificate 4",
     link: "#",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
+    thumbnail: "/certificates/C4.png",
   },
   {
-    title: "Data Structures & Algorithms",
+    title: "Certificate 5",
     link: "#",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
+    thumbnail: "/certificates/C5.png",
   },
   {
-    title: "TypeScript Professional",
+    title: "Certificate 7",
     link: "#",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
+    thumbnail: "/certificates/C7.png",
   },
   {
-    title: "API Development",
+    title: "Certificate 8",
     link: "#",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
-  },
-  {
-    title: "Agile Methodology",
-    link: "#",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
-  },
-  {
-    title: "Version Control with Git",
-    link: "#",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/invoker.png",
-  },
-  {
-    title: "Cybersecurity Basics",
-    link: "#",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+    thumbnail: "/certificates/C8.png",
   },
 ];
 
 /* ─── Component ──────────────────────────────────────────────── */
 export default function CertificateSection() {
   return (
-    <section className="bg-black" id="certificate">
+    <section className="bg-black relative" id="certificate">
       <HeroParallax products={certificates} />
     </section>
   );

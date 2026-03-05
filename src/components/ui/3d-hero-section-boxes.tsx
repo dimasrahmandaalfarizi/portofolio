@@ -3,7 +3,6 @@
 import React, { useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
-import { TextDisperse } from "@/components/ui/text-disperse";
 
 const Spline = dynamic(() => import("@splinetool/react-spline"), {
   ssr: false,
@@ -37,39 +36,8 @@ function HeroSplineBackground() {
   );
 }
 
-function ScreenshotSection({ screenshotRef }: { screenshotRef: React.RefObject<HTMLDivElement | null> }) {
-  return (
-    <>
-      {/* Laptop image — centered */}
-      <section className="relative z-10 flex flex-col items-center px-4 md:px-6 lg:px-8 mt-11 md:mt-12">
-        <div
-          ref={screenshotRef}
-          className="bg-gray-900 rounded-xl overflow-hidden shadow-2xl border border-gray-700/50 w-full max-w-4xl"
-        >
-          <img
-            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=3840&h=2160&q=80&auto=format&fit=crop"
-            alt="Portfolio Screenshot"
-            className="w-full h-auto block"
-          />
-        </div>
-      </section>
 
-      {/* Name text — vertically centered full-screen section */}
-      <section className="min-h-screen flex items-center justify-start px-4 md:px-8 overflow-hidden">
-        <div className="flex flex-col gap-0 w-full">
-          {["DIMAS", "RAHMANDA", "ALFARIZI"].map((word) => (
-            <TextDisperse
-              key={word}
-              className="text-[12vw] font-bold leading-none tracking-tight text-white"
-            >
-              {word}
-            </TextDisperse>
-          ))}
-        </div>
-      </section>
-    </>
-  );
-}
+import { TechStack3D } from "@/components/ui/tech-stack-3d";
 
 function HeroContent() {
   const base = { initial: { opacity: 0, y: 32 }, animate: { opacity: 1, y: 0 } };
@@ -130,16 +98,12 @@ function HeroContent() {
 }
 
 const HeroSection = () => {
-  const screenshotRef = useRef<HTMLDivElement>(null);
   const heroContentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       requestAnimationFrame(() => {
         const scrollPosition = window.pageYOffset;
-        if (screenshotRef.current) {
-          screenshotRef.current.style.transform = `translateY(-${scrollPosition * 0.5}px)`;
-        }
         if (heroContentRef.current) {
           const opacity = 1 - Math.min(scrollPosition / 400, 1);
           heroContentRef.current.style.opacity = opacity.toString();
@@ -168,13 +132,10 @@ const HeroSection = () => {
         >
           <HeroContent />
         </div>
-
       </div>
-
-      {/* Content below hero */}
-      <div className="bg-black relative z-10" style={{ marginTop: "-10vh" }}>
-        <ScreenshotSection screenshotRef={screenshotRef} />
-      </div>
+      
+      {/* Content below hero: Interactive 3D Tech Stack */}
+      <TechStack3D />
     </div>
   );
 };

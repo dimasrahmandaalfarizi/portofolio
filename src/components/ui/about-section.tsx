@@ -8,6 +8,7 @@ const IDENTITY = [
   { label: 'Location', value: 'Surabaya, Indonesia' },
   { label: 'Education', value: 'Informatics Engineering — UPNVJATIM' },
   { label: 'Role', value: 'Web Developer & Informatics Student' },
+  { label: 'Status', value: 'Backburner' },
 ];
 
 const FUN_FACTS = [
