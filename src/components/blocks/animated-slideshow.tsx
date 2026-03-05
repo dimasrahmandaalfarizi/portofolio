@@ -76,19 +76,19 @@ export const TextStaggerHover = React.forwardRef<
   HTMLElement,
   React.HTMLAttributes<HTMLElement> & TextStaggerHoverProps
 >(({ text, index, children, className, ...props }, ref) => {
-  const { activeSlide, changeSlide } = useHoverSliderContext()
-  const { characters } = splitText(text)
-  const isActive = activeSlide === index
-  const handleMouse = () => changeSlide(index)
+  const [isHovered, setIsHovered] = React.useState(false);
+  const { characters } = splitText(text);
+
   return (
     <span
       className={cn(
-        "relative inline-block origin-bottom overflow-hidden",
+        "relative inline-block origin-bottom overflow-hidden cursor-pointer",
         className
       )}
       {...props}
       ref={ref}
-      onMouseEnter={handleMouse}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       {characters.map((char, charIdx) => (
         <span
@@ -105,7 +105,7 @@ export const TextStaggerHover = React.forwardRef<
             <motion.span
               className="inline-block opacity-20"
               initial={{ y: "0%" }}
-              animate={isActive ? { y: "-110%" } : { y: "0%" }}
+              animate={isHovered ? { y: "-110%" } : { y: "0%" }}
             >
               {char}
               {char === " " && charIdx < characters.length - 1 && <>&nbsp;</>}
@@ -114,7 +114,7 @@ export const TextStaggerHover = React.forwardRef<
             <motion.span
               className="absolute left-0 top-0 inline-block opacity-100"
               initial={{ y: "110%" }}
-              animate={isActive ? { y: "0%" } : { y: "110%" }}
+              animate={isHovered ? { y: "0%" } : { y: "110%" }}
             >
               {char}
             </motion.span>
@@ -122,9 +122,9 @@ export const TextStaggerHover = React.forwardRef<
         </span>
       ))}
     </span>
-  )
-})
-TextStaggerHover.displayName = "TextStaggerHover"
+  );
+});
+TextStaggerHover.displayName = "TextStaggerHover";
 
 export const clipPathVariants = {
   visible: {

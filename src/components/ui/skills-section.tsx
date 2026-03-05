@@ -71,38 +71,18 @@ export default function SkillsSection() {
           Skills
         </motion.p>
 
-        {/* Animated slideshow */}
-        <HoverSlider className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-12 lg:gap-20">
-
-          {/* Left: skill titles */}
-          <div className="flex flex-col space-y-6 md:space-y-8 w-full lg:w-auto">
-            {SKILLS.map((skill, index) => (
+        {/* Skills list — text only */}
+        <div className="flex flex-col space-y-6 md:space-y-8 mt-10 w-full overflow-hidden">
+          {SKILLS.map((skill, index) => (
+            <motion.div key={skill.id} {...fu(0.1 + index * 0.05)} className="w-full">
               <TextStaggerHover
-                key={skill.id}
                 index={index}
-                className="cursor-pointer text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-white whitespace-nowrap"
+                className="cursor-default font-black uppercase tracking-tighter text-white whitespace-nowrap text-[8.5vw] md:text-[8vw] lg:text-[7.5vw] leading-[0.85]"
                 text={skill.title}
               />
-            ))}
-          </div>
-
-          {/* Right: image reveal — taller portrait-ish */}
-          <HoverSliderImageWrap className="w-full lg:w-[420px] aspect-[3/4] rounded-2xl overflow-hidden shrink-0">
-            {SKILLS.map((skill, index) => (
-              <div key={skill.id}>
-                <HoverSliderImage
-                  index={index}
-                  imageUrl={skill.imageUrl}
-                  src={skill.imageUrl}
-                  alt={skill.title}
-                  className="size-full object-cover"
-                  loading="eager"
-                  decoding="async"
-                />
-              </div>
-            ))}
-          </HoverSliderImageWrap>
-        </HoverSlider>
+            </motion.div>
+          ))}
+        </div>
 
       </div>
     </section>

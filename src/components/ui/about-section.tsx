@@ -68,8 +68,7 @@ const STACK: { category: string; items: Tech[] }[] = [
     category: 'DevOps & Cloud',
     items: [
       { name: 'Docker',          slug: 'docker',         color: '#2496ED' },
-      { name: 'AWS',             slug: 'aws',   color: '#FF9900', abbr: 'AWS',
-        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg' },
+      { name: 'AWS',             slug: 'amazonwebservices', color: '#232F3E' },
       { name: 'Google Cloud',    slug: 'googlecloud',    color: '#4285F4' },
       { name: 'GitHub Actions',  slug: 'githubactions',  color: '#2088FF' },
       { name: 'Linux',           slug: 'linux',          color: '#FCC624' },
@@ -82,7 +81,7 @@ const STACK: { category: string; items: Tech[] }[] = [
       { name: 'GitHub',   slug: 'github',            color: '#ffffff' },
       { name: 'Figma',    slug: 'figma',             color: '#F24E1E' },
       { name: 'Postman',  slug: 'postman',           color: '#FF6C37' },
-      { name: 'VS Code',  slug: 'vscode',  color: '#007ACC', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
+      { name: 'VS Code',  slug: 'visualstudiocode',  color: '#007ACC' },
     ],
   },
 ];
