@@ -2,6 +2,7 @@ import { Component as KineticNav } from "@/components/ui/sterling-gate-kinetic-n
 import { HeroSection } from "@/components/ui/3d-hero-section-boxes";
 import AboutSection from "@/components/ui/about-section";
 import SkillsSection from "@/components/ui/skills-section";
+import CertificateSection from "@/components/ui/certificate-section";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <SkillsSection />
+      <CertificateSection />
     </>
   );
 }

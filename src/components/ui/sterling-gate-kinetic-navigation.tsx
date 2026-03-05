@@ -189,7 +189,7 @@ export function Component() {
         >
           <div className="container is--full">
             <nav className="nav-row">
-              <a href="#" aria-label="home" className="nav-logo-row w-inline-block">
+              <a href="#" aria-label="home" className="nav-logo-row w-inline-block outline-none border-none focus:outline-none">
                 <span className="nav-logo-text" style={{ color: "#ffffff", letterSpacing: "0.12em", fontSize: "1rem" }}>RAHMANDA</span>
               </a>
               <div className="nav-row__right">
@@ -311,7 +311,17 @@ export function Component() {
                   </a>
                 </li>
                 <li className="menu-list-item" data-shape="3">
-                  <a href="#" className="nav-link w-inline-block">
+                  <a
+                    href="#certificate"
+                    className="nav-link w-inline-block"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      closeMenu();
+                      setTimeout(() => {
+                        document.getElementById('certificate')?.scrollIntoView({ behavior: 'smooth' });
+                      }, 400);
+                    }}
+                  >
                     <p className="nav-link-text">Certificate</p>
                     <div className="nav-link-hover-bg"></div>
                   </a>
