@@ -154,7 +154,7 @@ function TechBadge({ tech }: { tech: Tech }) {
 /* ─── Component ─────────────────────────────────────────────── */
 export default function AboutSection() {
   return (
-    <section className="bg-black text-white py-24 sm:py-32 px-6 sm:px-8" id="about">
+    <section className="bg-black text-white pt-24 sm:pt-32 px-6 sm:px-8" id="about">
       <div className="max-w-screen-xl mx-auto">
 
         {/* Section label */}
@@ -266,8 +266,6 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Bottom divider */}
-        <motion.div {...fu(0.5)} className="border-t border-white/[0.07]" />
       </div>
     </section>
   );

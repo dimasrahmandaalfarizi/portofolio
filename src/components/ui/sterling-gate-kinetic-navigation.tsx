@@ -295,7 +295,17 @@ export function Component() {
                   </a>
                 </li>
                 <li className="menu-list-item" data-shape="2">
-                  <a href="#" className="nav-link w-inline-block">
+                  <a
+                    href="#skills"
+                    className="nav-link w-inline-block"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      closeMenu();
+                      setTimeout(() => {
+                        document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' });
+                      }, 400);
+                    }}
+                  >
                     <p className="nav-link-text">Skills</p>
                     <div className="nav-link-hover-bg"></div>
                   </a>

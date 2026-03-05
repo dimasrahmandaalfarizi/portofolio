@@ -24,6 +24,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: clip;
+  background: #000;
 }
 
 /* ─── Header ─────────────────────────────────────────── */
@@ -40,7 +41,6 @@ body {
   background: rgba(10, 10, 15, 0.55);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .container.is--full {
