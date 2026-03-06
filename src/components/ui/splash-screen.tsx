@@ -50,7 +50,7 @@ const SplashScreen = ({ percent }: { percent: number }) => {
       
       <div className={`loading-screen ${clicked ? "pointer-events-none" : ""}`}>
         <div className="loading-marquee selection:bg-transparent">
-          <Marquee speed={80} gradient={false}>
+          <Marquee speed={50} gradient={false}>
             <span>A FRONTEND DEVELOPER</span> <span>A BACKEND DEVELOPER</span>
             <span> A UI / UX DESIGNER</span> <span>A CREATIVE DEVELOPER</span>
           </Marquee>

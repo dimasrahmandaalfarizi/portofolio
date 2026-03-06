@@ -87,7 +87,7 @@
 }
 
 .loading-hover {
-  background-color: #a87cff;
+  background-color: #ffffff;
   width: 250px;
   height: 120px;
   position: absolute;
@@ -96,7 +96,7 @@
   border-radius: 50%;
   transform: translate(-50%, -50%);
   filter: blur(30px);
-  opacity: 1;
+  opacity: 0.15;
   transition: opacity 500ms;
 }
 
@@ -296,7 +296,7 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: #a87cff;
+  background-color: #ffffff;
   animation: ball25 7s infinite;
   transform: translateY(10px);
   animation-timing-function: cubic-bezier(0.3, 1.18, 0.63, 1.28);

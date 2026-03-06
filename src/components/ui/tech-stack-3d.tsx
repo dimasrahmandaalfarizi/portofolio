@@ -48,10 +48,10 @@ function SphereGeo({
   const api = useRef<RapierRigidBody | null>(null);
 
   useFrame((_state, delta) => {
-    if (!isActive) return;
+    if (!isActive || !api.current) return;
     delta = Math.min(0.1, delta);
     const impulse = vec
-      .copy(api.current!.translation())
+      .copy(api.current.translation())
       .normalize()
       .multiply(
         new THREE.Vector3(
@@ -182,6 +182,8 @@ export function TechStack3D() {
       <div className="absolute inset-0 w-full h-full">
         <Canvas
           shadows
+          dpr={[1, 1.5]}
+          performance={{ min: 0.5 }}
           gl={{ alpha: true, stencil: false, depth: false, antialias: false }}
           camera={{ position: [0, 0, 20], fov: 32.5, near: 1, far: 100 }}
           onCreated={(state) => (state.gl.toneMappingExposure = 1.5)}

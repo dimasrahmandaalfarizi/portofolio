@@ -60,7 +60,7 @@ const fu = (delay = 0) => ({
 /* ─── Component ──────────────────────────────────────────────── */
 export default function SkillsSection() {
   return (
-    <section className="bg-black text-white py-24 sm:py-32 px-6 sm:px-8" id="skills">
+    <section className="bg-black text-white pt-32 sm:pt-48 pb-24 sm:pb-32 px-6 sm:px-8" id="skills">
       <div className="max-w-screen-xl mx-auto">
 
         {/* Section label */}
