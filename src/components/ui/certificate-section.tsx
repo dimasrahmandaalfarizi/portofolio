@@ -88,7 +88,7 @@ const certificates = [
 /* ─── Component ──────────────────────────────────────────────── */
 export default function CertificateSection() {
   return (
-    <section className="bg-black relative pt-16 sm:pt-24 mt-[250px] sm:mt-[350px]" id="certificate">
+    <section className="bg-black relative pt-16 sm:pt-24 mt-[100px] sm:mt-[250px]" id="certificate">
       <HeroParallax products={certificates} />
     </section>
   );

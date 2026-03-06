@@ -60,24 +60,24 @@ const fu = (delay = 0) => ({
 /* ─── Component ──────────────────────────────────────────────── */
 export default function SkillsSection() {
   return (
-    <section className="bg-black text-white pt-32 sm:pt-48 pb-24 sm:pb-32 px-6 sm:px-8 mt-[250px] sm:mt-[350px]" id="skills">
+    <section className="bg-black text-white pt-32 sm:pt-48 pb-24 sm:pb-32 px-6 sm:px-8 mt-[100px] sm:mt-[250px]" id="skills">
       <div className="max-w-screen-xl mx-auto">
 
         {/* Section label */}
         <motion.p
           {...fu(0)}
-          className="text-xs font-medium tracking-[0.3em] uppercase text-white/30 mb-16"
+          className="text-xs font-medium tracking-[0.3em] uppercase text-white/30 mb-8 sm:mb-16"
         >
           Skills
         </motion.p>
 
         {/* Skills list — text only */}
-        <div className="flex flex-col space-y-6 md:space-y-8 mt-10 w-full overflow-hidden">
+        <div className="flex flex-col space-y-8 sm:space-y-6 md:space-y-8 mt-6 sm:mt-10 w-full overflow-hidden">
           {SKILLS.map((skill, index) => (
             <motion.div key={skill.id} {...fu(0.1 + index * 0.05)} className="w-full">
               <TextStaggerHover
                 index={index}
-                className="cursor-default font-black uppercase tracking-tighter text-white whitespace-nowrap text-[8.5vw] md:text-[8vw] lg:text-[7.5vw] leading-[0.85]"
+                className="cursor-default font-black uppercase tracking-tighter text-white whitespace-nowrap text-[6.5vw] sm:text-[7vw] md:text-[8.5vw] lg:text-[7.5vw] leading-[0.85] sm:leading-[0.85] md:leading-[0.85]"
                 text={skill.title}
               />
             </motion.div>
