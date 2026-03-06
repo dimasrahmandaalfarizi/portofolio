@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/ui/3d-hero-section-boxes";
 import AboutSection from "@/components/ui/about-section";
 import SkillsSection from "@/components/ui/skills-section";
 import CertificateSection from "@/components/ui/certificate-section";
+import ContactSection from "@/components/ui/contact-section";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <AboutSection />
       <SkillsSection />
       <CertificateSection />
+      <ContactSection />
     </>
   );
 }

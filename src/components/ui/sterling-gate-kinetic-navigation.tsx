@@ -333,7 +333,17 @@ export function Component() {
                   </a>
                 </li>
                 <li className="menu-list-item" data-shape="5">
-                  <a href="#" className="nav-link w-inline-block">
+                  <a
+                    href="#contact"
+                    className="nav-link w-inline-block"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      closeMenu();
+                      setTimeout(() => {
+                        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                      }, 400);
+                    }}
+                  >
                     <p className="nav-link-text">Contact</p>
                     <div className="nav-link-hover-bg"></div>
                   </a>
