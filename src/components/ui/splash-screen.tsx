@@ -27,7 +27,7 @@ const SplashScreen = ({ percent }: { percent: number }) => {
       setClicked(true);
       setTimeout(() => {
         setIsLoading(false);
-      }, 900); // Wait for the "loader-out" animation to finish before destroying
+      }, 1900); // Wait for the expanding black circle (800ms) and fade out (1000ms)
     }
   }, [isLoaded, setIsLoading]);
 
@@ -48,7 +48,7 @@ const SplashScreen = ({ percent }: { percent: number }) => {
         </a>
       </div>
       
-      <div className={`loading-screen ${clicked ? "pointer-events-none" : ""}`}>
+      <div className={`loading-screen transition-opacity duration-1000 ${clicked ? "pointer-events-none delay-[800ms] opacity-0" : ""}`}>
         <div className="loading-marquee selection:bg-transparent">
           <Marquee speed={50} gradient={false}>
             <span>A FRONTEND DEVELOPER</span> <span>A BACKEND DEVELOPER</span>

@@ -172,22 +172,21 @@ export function TechStack3D() {
   return (
     <div 
       ref={containerRef}
-      className="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center bg-black z-10"
+      className="relative w-full h-screen overflow-visible flex flex-col items-center justify-center bg-transparent z-20"
       style={{ marginTop: "-10vh" }}
     >
       <h2 className="absolute top-20 md:top-32 w-full text-center text-4xl md:text-5xl lg:text-7xl xl:text-[80px] font-medium uppercase tracking-tight text-white z-10 pointer-events-none">
         My Techstack
       </h2>
 
-      <div className="absolute inset-0 w-full h-full">
+      <div className="absolute inset-0 w-full h-full overflow-visible pointer-events-none">
         <Canvas
           shadows
           dpr={[1, 1.5]}
           performance={{ min: 0.5 }}
           gl={{ alpha: true, stencil: false, depth: false, antialias: false }}
           camera={{ position: [0, 0, 20], fov: 32.5, near: 1, far: 100 }}
-          onCreated={(state) => (state.gl.toneMappingExposure = 1.5)}
-          className="w-full h-full"
+          className="w-full h-full pointer-events-auto"
         >
           <ambientLight intensity={1} />
           <spotLight

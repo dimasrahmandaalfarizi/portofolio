@@ -49,16 +49,7 @@ function HeroContent() {
       {/* ── Left column ── */}
       <div className="flex flex-col gap-6 w-full lg:w-1/2">
 
-        {/* Badge */}
-        <motion.div
-          {...base}
-          transition={{ duration: 0.6, ease, delay: 0 }}
-          className="inline-flex items-center gap-2.5 self-start px-4 py-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm"
-          style={{ pointerEvents: "auto" }}
-        >
-          <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#4ade80", display: "inline-block", boxShadow: "0 0 10px #4ade80" }} />
-          <span className="text-xs font-medium text-white/80 tracking-widest uppercase">Available for Work</span>
-        </motion.div>
+
 
         {/* Heading */}
         <motion.h1
@@ -66,7 +57,7 @@ function HeroContent() {
           transition={{ duration: 0.7, ease, delay: 0.15 }}
           className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl font-bold leading-[1.05] tracking-tight"
         >
-          Crafting<br />Digital<br />Experiences
+          Building<br />Future<br />Web Apps
         </motion.h1>
 
         {/* Tech stack line */}
@@ -75,7 +66,7 @@ function HeroContent() {
           transition={{ duration: 0.6, ease, delay: 0.3 }}
           className="text-xs sm:text-sm text-gray-400 tracking-[0.2em] uppercase"
         >
-          React · Next.js · TypeScript · UI · 3D
+          Frontend · Backend · UI/UX · Creative
         </motion.div>
       </div>
 
@@ -88,8 +79,7 @@ function HeroContent() {
           transition={{ duration: 0.6, ease, delay: 0.4 }}
           className="text-base sm:text-lg text-white/65 leading-[1.8] max-w-md"
         >
-          Building modern, fast, and beautiful web experiences.
-          Passionate about clean code and stunning UI that leaves an impression.
+          Transforming complex ideas into interactive, responsive digital interfaces, delivering world-class user experiences.
         </motion.p>
 
       </div>
