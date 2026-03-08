@@ -49,10 +49,26 @@ const SplashScreen = ({ percent }: { percent: number }) => {
       </div>
       
       <div className={`loading-screen transition-opacity duration-1000 ${clicked ? "pointer-events-none delay-[800ms] opacity-0" : ""}`}>
-        <div className="loading-marquee selection:bg-transparent">
-          <Marquee speed={50} gradient={false}>
+        <div className="loading-marquee selection:bg-transparent flex flex-col gap-2 md:gap-4">
+          <Marquee speed={40} gradient={false} direction="left">
             <span>A FRONTEND DEVELOPER</span> <span>A BACKEND DEVELOPER</span>
-            <span> A UI / UX DESIGNER</span> <span>A CREATIVE DEVELOPER</span>
+            <span>A UI / UX DESIGNER</span> <span>A CREATIVE DEVELOPER</span>
+          </Marquee>
+          <Marquee speed={50} gradient={false} direction="right">
+            <span>MODERN WEB DESIGN</span> <span>SMOOTH ANIMATIONS</span>
+            <span>RESPONSIVE INTERFACES</span> <span>INTERACTIVE EXPERIENCES</span>
+          </Marquee>
+          <Marquee speed={60} gradient={false} direction="left">
+            <span>REACT & NEXT.JS</span> <span>TAILWIND CSS</span>
+            <span>TYPESCRIPT</span> <span>GSAP ANIMATIONS</span>
+          </Marquee>
+          <Marquee speed={45} gradient={false} direction="right">
+            <span>CLEAN CODE</span> <span>PERFORMANCE FOCUSED</span>
+            <span>ACCESSIBLE DESIGN</span> <span>BEST PRACTICES</span>
+          </Marquee>
+          <Marquee speed={55} gradient={false} direction="left">
+            <span>PIXEL PERFECT</span> <span>USER CENTRIC</span>
+            <span>ATTENTION TO DETAIL</span> <span>INNOVATIVE SOLUTIONS</span>
           </Marquee>
         </div>
         
